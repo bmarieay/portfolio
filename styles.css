@@ -39,6 +39,7 @@ section{
 .hero{
     height: 60%;
     width: 100%;
+    position: relative;
 }
 
 .hero img{
@@ -47,12 +48,24 @@ section{
     object-fit: cover;
 }
 
-.hero__title{
-    position: absolute;
-    top: 55%;
-    left: 10%;
-    transform: translate(-20%, -70%);
+.hero__text{
     color: var(--primary-clr);
+    position: absolute;
+
+}
+
+.hero__text--prmry{
+    top: 80%;
+    left: 20%;
+    transform: translate(-20%, -70%);
+    font-size: var(--fs-big);
+}
+
+.hero__text--scndry{
+    padding-top: 3rem;
+    top: 90%;
+    left: 20%;
+    transform: translate(-20%, -70%);
     font-size: var(--fs-big);
 }
 
