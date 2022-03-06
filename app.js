@@ -1,22 +1,28 @@
 const hero = document.querySelector(".hero");
 const slider = document.querySelector(".slider");
 const logo = document.querySelector("#logo");
-const primaryNav = document.querySelector(".nav__item");
+const primaryNav = document.querySelector("#nav__item");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const transition = document.querySelectorAll('.transition');
-const section = document.querySelector('.hero')
+const section = document.querySelector('.hero');
+const faders = document.querySelectorAll('.faders');
+const sliders = document.querySelectorAll('.sliders');
 const options = {
-    rootMargin: "-500px 0px 0px 0px"
+    rootMargin: "-400px 0px 0px 0px"
 }
-// const heroTitle = document.querySelector(".hero__title");
+const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -250px 0px"
+};
 
+//hero animation
 const t1 = new TimelineMax();
 
 t1.fromTo(hero, 1, {height: "0%"}, {height: "80%", ease: Power2.easeInOut})
-.fromTo(hero, 1.2, {width: "100%"}, {width: "90%", ease: Power2.easeInOut})
-.fromTo(primaryNav, 0.5, {opacity: 0, x: 30}, {opacity: 1, x: 0}, "-=0.5");
+.fromTo(hero, 1.2, {width: "100%"}, {width: "80%", ease: Power2.easeInOut});
+// .fromTo(primaryNav, 0.5, {opacity: 0, x: 30}, {opacity: 1, x: 0}, "-=0.5");
 
-
+//navbar toggling
 navToggle.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute("data-visible")
     if(visibility === "false"){
@@ -26,19 +32,16 @@ navToggle.addEventListener('click', () => {
         primaryNav.setAttribute('data-visible', 'false');
         navToggle.setAttribute('aria-expanded', 'false')
     }
-    console.log(visibility)
 })
 
-
+//for navbar scroll
 const observer = 
     new IntersectionObserver(function (entries, observer){
     entries.forEach(entry => {
         if(!entry.isIntersecting){
-            console.log(transition)
             for(let trans of transition){
                 trans.classList.add('nav-scrolled')
             }
-            console.log(entry)
         } else {
             for(let trans of transition){
                 trans.classList.remove('nav-scrolled')
@@ -46,10 +49,35 @@ const observer =
         }
 
     })
-}, options)
+}, options);
 
 observer.observe(section);
 
+//for appearonscroll animations
+const appearOnScroll = 
+    new IntersectionObserver(function(entries, appearOnScroll){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting){
+                return;
+            } else {
+                entry.target.classList.add("appear");
+                appearOnScroll.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+
+
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+
+sliders.forEach(slider => {
+    appearOnScroll.observe(slider);
+})
+
+
+//stop animation while resizing for navbar
 let resizeTimer;
 window.addEventListener("resize", () => {
     document.body.classList.add("resize-animation-stopper");
