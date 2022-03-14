@@ -7,6 +7,7 @@ const transition = document.querySelectorAll('.transition');
 const section = document.querySelector('.hero');
 const faders = document.querySelectorAll('.faders');
 const sliders = document.querySelectorAll('.sliders');
+const navLinks = document.querySelectorAll('.nav__link');
 const options = {
     rootMargin: "-400px 0px 0px 0px"
 }
@@ -86,3 +87,12 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-animation-stopper");
     }, 400);
 });
+
+//close the navigation after clicking
+
+for(let link of navLinks){
+    link.addEventListener('click', () => {
+        primaryNav.setAttribute('data-visible', 'false');
+        navToggle.setAttribute('aria-expanded', 'false');
+    })
+}
