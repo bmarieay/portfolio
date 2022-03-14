@@ -18,15 +18,15 @@
                <ul id="nav__item" class="nav__item flex transition" data-visible="false">
                    <div class="nav__group flex">
                        <li class="nav__list active">
-                           <a class="nav__link" href="">Home</a>
+                           <a class="nav__link" href="#main">Home</a>
                         </li>
-                       <li class="nav__list"><a class="nav__link" href="">About</a></li>
-                       <li class="nav__list"><a class="nav__link" href="">Resume</a></li>
+                       <li class="nav__list"><a class="nav__link" href="#about">About</a></li>
+                       <li class="nav__list"><a class="nav__link" href="#resume">Resume</a></li>
                    </div>
                    <div class="nav__group flex">
-                       <li class="nav__list"><a class="nav__link" href="">Projects</a></li>
-                       <li class="nav__list"><a class="nav__link" href="">Skills</a></li>
-                       <li class="nav__list"><a class="nav__link" href="">Contact</a></li>
+                       <li class="nav__list"><a class="nav__link" href="#projects">Projects</a></li>
+                       <li class="nav__list"><a class="nav__link" href="#skills">Skills</a></li>
+                       <li class="nav__list"><a class="nav__link" href="#contact">Contact</a></li>
                    </div>
                 </ul>
            </div>
@@ -45,12 +45,12 @@
 
     <main>
         <div class="container">
-            <section class="section section-about faders">
+            <section class="section section-about faders" id="about">
                 <h2 class="section__title">About Me</h2>
                 <p class="section__description">I was born and raised in the Philippines and moved here in the US four years ago. I love hiking and
                     sky diving. I am a graduating Computer Science student this sem who loves building websites</p>
             </section>
-            <section class="section section-skill">
+            <section class="section section-skill" id="skills">
                 <div class="section-skill__icons sliders from-left">
                     <h2 class="section__title">Technical Skills</h2>
                     <div class="section__box container">
@@ -81,26 +81,46 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-project faders" style="border: 2px solid black">
+            <section class="section section-project faders" id="projects" style="border: 2px solid black">
                 <h2 class="section__title">Projects</h2>
                 <h3 class="section__subtitle">YelpCamp</h3>
                 <figure class="project__img desktop-only">
-                    <img src="/images/desktop-yelp.png" alt="yelpcamp image">
+                    <img class="preview-img" src="/images/desktop-yelp.png" alt="yelpcamp image">
                     <div class="project__img-links">
-                        <img src="/images/github-big.png" alt="github-logo">
-                        <img src="/images/live-streaming-big.png" alt="">
-                        <img src="/images/youtube-big.png" alt="">
+                        <a href="https://github.com/bmarieay/yelp-camp" target="_blank" rel="noopener noreferrer"><img src="/images/github-big.png" alt="github-logo"></a>
+                        <a href="https://yelpcamp-united-states.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img src="/images/live-streaming-big.png" alt=""></a>
+                        <a href="https://www.youtube.com/" rel="noopener noreferrer" target="_blank"><img src="/images/youtube-big.png" alt=""></a>
                     </div>
                 </figure>
                 <figure class="project__img mobile-only">
-                    <img src="/images/mobile-yelp.png" alt="">
+                    <img class="preview-img" src="/images/mobile-yelp.png" alt="">
                     <div class="project__img-links">
-                        <img src="/images/github-sm.png" alt="github-logo">
-                        <img src="/images/live-streaming-sm.png" alt="">
-                        <img src="/images/youtube-sm.png" alt="">
+                        <a href="https://github.com/bmarieay/yelp-camp" target="_blank" rel="noopener noreferrer""><img src="/images/github-sm.png" alt="github-logo"></a>
+                        <a href="https://yelpcamp-united-states.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img src="/images/live-streaming-sm.png" alt=""></a>
+                        <a href="https://www.youtube.com/" rel="noopener noreferrer" target="_blank"><img src="/images/youtube-sm.png" alt=""></a>
                     </div>
                 </figure>
+                <p class="section__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nobis, labore voluptates sed obcaecati sit amet, rerum esse aut facilis minus sapiente nihil earum nam temporibus? At repudiandae nam possimus?</p>
 
+            </section>
+            <section class="section section-contact faders" id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <div class="box">
+                    <form action="">
+                        <div class="field name-field">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="field email-field">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="field message-field">
+                            <label for="message">Message:</label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        </div>
+                    </form>
+                </div>
             </section>
         </div>
     </main>
