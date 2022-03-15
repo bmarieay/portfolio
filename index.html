@@ -106,7 +106,8 @@
             <section class="section section-contact faders" id="contact">
                 <h2 class="section__title">Contact Me</h2>
                 <div class="box">
-                    <form action="">
+                    <form action="https://formspree.io/f/xyyopeyw" method="POST">
+                        <input type="hidden" name="contact_number">
                         <div class="field name-field">
                             <label for="name">Name:</label>
                             <input type="text" name="name" id="name">
@@ -119,6 +120,7 @@
                             <label for="message">Message:</label>
                             <textarea name="message" id="message" cols="30" rows="10"></textarea>
                         </div>
+                        <button id="submit-btn" type="submit">Send</button>
                     </form>
                 </div>
             </section>
