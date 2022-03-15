@@ -187,7 +187,6 @@ nav{
     left: 0;
     width: 100%;
     height: 100vh;
-    /* background: linear-gradient(to left, #473f36, #8b7e75);   */
     background: linear-gradient(to left, #daa880, #daa880);
     z-index: -1;
 }
@@ -244,9 +243,9 @@ main{
 }
 
 .section-about,
-.section-project{
+figcaption{
     text-align: left;
-
+    
 }
 
 .section-about{
@@ -256,12 +255,13 @@ main{
 
 
 
-.section-skill{
+.responsive-box{
     display: flex;
     flex-direction: column;
 }
 
-.section-skill__icons + .section-skill__icons{
+.section-skill__icons + .section-skill__icons,
+.project__img + .project__img{
     margin-top: 5rem;
 } 
 
@@ -296,8 +296,7 @@ main{
 
 .project__img{
     position: relative;
-    width: max-content;
-    max-width: 100%;
+        max-width: 375px;
 }
 
 
@@ -327,7 +326,7 @@ figcaption{
 
 figure{
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin: 0 auto;
 }
 
 figure .preview-img{
@@ -350,15 +349,19 @@ figure:hover figcaption{
     justify-content: space-between;
     margin-top: 2rem;
     height: 90%;
+    /* max-height: 200px; */
     flex-direction: column;
 }
 
 .project__title{
+    margin-top: auto;
     font-size: var(--fs-big);
 }
 
 .project__description{
     font-size: var(--fs-xsmall);
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 
 .project__link{
@@ -366,6 +369,8 @@ figure:hover figcaption{
     color: white;
     text-transform: uppercase;
 }
+
+
 
 
 
@@ -436,7 +441,7 @@ figure:hover figcaption{
         display: none;
     } */
 
-    .project__img{
+    /* .project__img{
         margin-bottom: 2rem;
     }
 
@@ -446,6 +451,10 @@ figure:hover figcaption{
         height: 100%;
         position: absolute;
         width: 100%;
+    } */
+
+    .project__description{
+        font-size: var(--fs-small);
     }
 
     .project__img-links {
@@ -522,14 +531,15 @@ figure:hover figcaption{
     .section__box.container{
         width: unset;
     }
-    .section-skill{
+    .responsive-box{
         justify-content: space-between;
         flex-direction: row;
     }
-    .section-skill__icons{
+    .section-skill__icons, .project__img{
         flex-basis: 48%;
     }
-    .section-skill__icons + .section-skill__icons{
+    .section-skill__icons + .section-skill__icons, 
+    .project__img + .project__img{
         margin-top: 0;
     } 
 }
@@ -538,7 +548,7 @@ figure:hover figcaption{
     .hero__text--prmry{
         font-size: var(--fs-largest);
     }
-    .section-skill__icons{
+    .section-skill__icons, .project__img{
         flex-basis: 50%;
     }
 
