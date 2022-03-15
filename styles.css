@@ -415,6 +415,69 @@ figure:hover figcaption{
     background-color: white;
 }
 
+.modal{
+    padding-bottom: 3rem;
+    text-align: left;
+    position: fixed;
+    z-index: 10000;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0 0 0 3em rgba(0, 0, 0, 0.85);
+}
+
+.modal__header{
+    background: url('/images/gautam-singh-T9ZWwqt4pho-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 3rem 5rem 0;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.header__box{
+    padding: 1em;
+    background-color: #4a41388e;
+    width: 90%;
+    max-width: 450px;
+}
+
+.modal__content{
+    font-size: var(--fs-small);
+
+    width: 85%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.modal-close{
+    position: fixed;
+    top: .8em;
+    left: .5em;
+    background-color: orange;
+    border: none;
+    width: 30px; 
+    height: 30px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.full-width{
+    width: 100vw;
+    max-width: initial;
+    margin: 2rem calc(50% - 50vw);
+    height: 25vh;
+    object-fit: cover;
+}
+
+.pull-left, .pull-right{
+    margin-top: 2rem;
+}
+
 
 
 @media (min-width: 640px){
@@ -433,26 +496,6 @@ figure:hover figcaption{
         font-size: var(--fs-largest);
     }
 
-    /* .desktop-only{
-        display: block;
-    }
-
-    .mobile-only{
-        display: none;
-    } */
-
-    /* .project__img{
-        margin-bottom: 2rem;
-    }
-
-    .project__img::before {
-        background-color:rgba(138, 115, 136, .5);
-        content: "";
-        height: 100%;
-        position: absolute;
-        width: 100%;
-    } */
-
     .project__description{
         font-size: var(--fs-small);
     }
@@ -470,6 +513,22 @@ figure:hover figcaption{
         transform: translate(-50%, -50%);
     }
 
+    .modal__header{
+        padding: 15rem 3rem 10rem 0;
+    }
+
+    .pull-left{
+        width: 60%;
+        float: left;
+        margin-right: 2rem;
+    }
+    
+    .pull-right{
+        width: 60%;
+        float: right;
+        margin-left: 2rem;
+    }
+    
 
 }
 
@@ -504,7 +563,7 @@ figure:hover figcaption{
         position: fixed;
         z-index: 9999;
         background: url("images/icon-hamburger.svg") no-repeat center;
-        width: 2rem;
+        width: 2rem;  
         background-color: var(--background-inverse);
         border-radius: 5px;
         padding: 2.5rem;
@@ -541,7 +600,28 @@ figure:hover figcaption{
     .section-skill__icons + .section-skill__icons, 
     .project__img + .project__img{
         margin-top: 0;
-    } 
+    }
+    
+    .modal{
+        top: 4em;
+        bottom: 4em;
+        left: 4em;
+        right: 4em;
+        box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.85);
+
+    }
+
+    .modal-close{
+        position: fixed;
+        top: 2.2em;
+        left: 2em;
+        background-color: orange;
+        border: none;
+        width: 40px; 
+        height: 40px;
+        padding: 10px;
+        border-radius: 50%;
+    }
 }
 
 @media(min-width: 1200px){
