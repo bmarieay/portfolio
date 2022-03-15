@@ -298,6 +298,26 @@ main{
     margin-top: 2rem;
 }
 
+#submit-btn{
+    border: 1px solid black;
+    font-family: inherit;
+    font-size: var(--fs-small);
+    margin-top: 3rem;
+    padding: 1rem 2.25rem;
+    border-radius: 10px;
+    background-color: orange;
+    transition: transform 50ms ease-in, background-color 100ms ease-in;
+}
+
+#submit-btn:hover{
+    transform: scale(1.03);
+    background-color: rgb(250, 183, 59);
+}
+
+#submit-btn:active{
+    background-color: white;
+}
+
 
 
 @media (min-width: 640px){
