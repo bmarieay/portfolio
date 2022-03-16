@@ -450,7 +450,7 @@ figure:hover figcaption{
     font-size: var(--fs-small);
 
     width: 85%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -511,6 +511,14 @@ figure:hover figcaption{
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .modal .project__title{
+        font-size: var(--fs-largest);
+    }
+
+    .modal__description{
+        font-size: var(--fs-small);
     }
 
     .modal__header{
@@ -622,6 +630,14 @@ figure:hover figcaption{
         padding: 10px;
         border-radius: 50%;
     }
+
+    .modal .project__title{
+        font-size: var(--fs-largest);
+    }
+
+    .header__box{
+        max-width: 550px;
+    }
 }
 
 @media(min-width: 1200px){
@@ -636,6 +652,10 @@ figure:hover figcaption{
         padding-left: 5rem;
         padding-right: 5rem;
         max-width: 420px;
+    }
+
+    .header__box{
+        padding: 2em;
     }
 }
 
