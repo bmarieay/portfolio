@@ -407,7 +407,6 @@ figure:hover figcaption{
 
 .modal{
     display: none;
-    padding-bottom: 3rem;
     text-align: left;
     position: fixed;
     z-index: 10000;
@@ -419,6 +418,14 @@ figure:hover figcaption{
     overflow-y: scroll;
     overflow-x: hidden;
     box-shadow: 0 0 0 3em rgba(0, 0, 0, 0.85);
+}
+
+/* .modal-resume{
+    padding-bottom: none;
+} */
+
+.modal-project{
+    padding-bottom: 3rem;
 }
 
 .is-open{
