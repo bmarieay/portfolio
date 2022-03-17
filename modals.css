@@ -7,7 +7,7 @@
     bottom: 2em;
     left: 2em;
     right: 2em;
-    background-color: var(--text-clr-inverse);
+    background-color: var(--primary-clr);
     overflow-y: scroll;
     overflow-x: hidden;
     box-shadow: 0 0 0 3em rgba(0, 0, 0, 0.85);
