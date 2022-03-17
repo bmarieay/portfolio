@@ -1,5 +1,5 @@
 footer{
-    padding: 5rem 0 0 0;
+    padding: 10rem 0 0 0;
     background: var(--primary-clr);
     font-size: var(--fs-medium);
     border-top: 2px solid var(--pink-clr-accent);
@@ -53,5 +53,6 @@ footer a{
 #copyright{
     font-size: var(--fs-xsmall);
     margin: 5em 0 0 3em;
+    padding-top: 5rem;
     padding-bottom: 25px;
 }

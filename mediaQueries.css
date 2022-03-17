@@ -1,4 +1,21 @@
 @media (min-width: 640px){
+    .about__img-container{
+        max-width: 800px;
+    }
+
+    .about__description{
+        max-width: 50ch;
+    }
+
+    .about__img{
+        margin-left: 2rem;
+        object-fit: cover;
+        width: 50%;
+        max-height: 300px;
+        display: block;
+        float: right;
+    }
+
     .nav__item {
         --gap: 1.8rem;
         padding-block: 2rem;
@@ -123,6 +140,19 @@
 }
 
  @media(min-width: 940px){
+    .about__img-container{
+        max-width: 1200px;
+    }
+
+    .about__img{
+        width: 40%;
+    }
+
+    .about__description{
+        max-width: 50ch;
+        padding-right: 5rem;
+    }
+
     .section__box{
         padding-left: 3rem;
         padding-right: 3rem;
@@ -189,6 +219,10 @@
 
     .header__box{
         max-width: 550px;
+    }
+
+    .circle-pull-middle{
+        margin-left: 50%;
     }
 
 }

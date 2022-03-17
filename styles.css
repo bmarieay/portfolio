@@ -31,13 +31,14 @@ html{
     --text-clr: #FFF;
     --text-clr-accent: var(--pink-clr);
     
-    --text-clr-inverse: #FFF;
+
 
     --primary-clr: #040028;
     --secondary-clr: #040028;
     --background-inverse: #4a4138;
     --box-clr: #282c34;
-    --accent-clr: orange;
+    --box-clr-light: #282c34a9;
+    --accent-clr: #ffa500;
 }
 
 .resize-animation-stopper * {
@@ -59,7 +60,30 @@ html{
 	white-space: nowrap !important;  
 }
 
+.circle{
+    z-index: -200;
+    background-color: var(--box-clr-light);
+    border-radius: 50%;
+}
 
+.circle-big{
+    width: 300px;
+    height: 300px;
+    
+}
+
+.circle-small{
+    width: 150px;
+    height: 150px;
+}
+
+.circle-pull-right{
+    margin-left: auto;
+}
+
+.circle-pull-middle{
+    margin-left: 25%;
+}
 
 body{
     font-family: var(--font-family);
@@ -79,12 +103,19 @@ form{
     margin: 0 auto;
 }
 
+label{
+    color: var(--text-clr);
+    text-shadow: 1px 1px 0 var(--text-clr-accent);
+    letter-spacing: .07em;
+}
+
 input{
-    padding: .5rem 0;
+    padding: .75rem;
 }
 
 
 textarea{
+    padding: 0 .75rem;
     resize: none;
 }
 
@@ -242,11 +273,13 @@ main{
 }
 
 .hero__text--scndry{
-    padding-top: 3rem;
+    padding-top: 20rem;
     top: 90%;
     left: 20%;
     transform: translate(-20%, -70%);
-    font-size: var(--fs-xsmall);
+    font-size: var(--fs-medium);
+    letter-spacing: .07em;
+    text-shadow:  1px 0 var(--pink-clr);
 }
 
 .section{
@@ -261,7 +294,11 @@ figcaption{
 
 .section-about{
     margin-top: 10rem;
-    padding: 10rem 0;
+    padding: 30rem 0;
+}
+
+.about__img{
+    display: none;
 }
 
 
@@ -297,15 +334,29 @@ figcaption{
 }
 
 .box{
-    max-width: 500px;
+    position: relative;
+    max-width: 550px;
     margin: 0 auto;
 }
 
 .section__box{
     display: flex;
+    position: relative;
     align-items: center;
     max-width: 375px;
     min-height: 400px;
+}
+
+.section__box::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 11px;
+    right: 9px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--pink-clr-accent);
 }
 
 .project__img{
@@ -336,7 +387,7 @@ figcaption{
 
 
 .section-project{
-    padding-bottom: 20rem;
+    padding: 20rem 0;
 }
 
 .project__img-links {
@@ -406,7 +457,7 @@ figure:hover figcaption{
 }
 
 .project__description{
-    font-size: var(--fs-xsmall);
+    font-size: var(--fs-small);
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -418,7 +469,7 @@ figure:hover figcaption{
 }
 
 .section-contact{
-    padding-top: 0;
+    padding-top: 8rem;
     padding-bottom: 15rem;
 }
 
@@ -432,6 +483,7 @@ figure:hover figcaption{
 }
 
 #submit-btn{
+    font-weight: 400;
     border: 1px solid var(--text-clr);
     font-family: inherit;
     font-size: var(--fs-small);

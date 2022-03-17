@@ -20,7 +20,9 @@ const appearOptions = {
 const t1 = new TimelineMax();
 
 t1.fromTo(hero, 1, {height: "0%"}, {height: "80%", ease: Power2.easeInOut})
-.fromTo(hero, 1.2, {width: "100%"}, {width: "80%", ease: Power2.easeInOut});
+.fromTo(hero, 1.1, {width: "100%"}, {width: "80%", ease: Power2.easeInOut})
+.fromTo(primaryNav, .5, {opacity: '0'}, {opacity: '1', ease: Power2.easeInOut});
+
 
 //navbar toggling
 navToggle.addEventListener('click', () => {
