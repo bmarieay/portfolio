@@ -1,0 +1,89 @@
+.modal{
+    display: none;
+    text-align: left;
+    position: fixed;
+    z-index: 10000;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    background-color: var(--text-clr-inverse);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0 0 0 3em rgba(0, 0, 0, 0.85);
+}
+
+
+.modal-project{
+    padding-bottom: 3rem;
+}
+
+.is-open{
+    display: block;
+}
+
+.modal__header{
+    background: url('/images/gautam-singh-T9ZWwqt4pho-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 3rem 5rem 0;
+    color: var(--text-clr-inverse);
+    margin-bottom: 2rem;
+}
+
+.header__box{
+    padding: 1em;
+    background-color: #4a41388e;
+    width: 90%;
+    max-width: 450px;
+}
+
+.modal__content{
+    font-size: var(--fs-small);
+
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.modal-close{
+    position: fixed;
+    top: .8em;
+    left: .5em;
+    background-color: var(--accent-clr);
+    border: none;
+    width: 30px; 
+    height: 30px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.full-width{
+    width: 100vw;
+    max-width: initial;
+    margin: 2rem calc(50% - 50vw);
+    height: 25vh;
+    object-fit: cover;
+}
+
+.pull-left, .pull-right{
+    margin-top: 2rem;
+}
+
+@keyframes modalIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes modalOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
