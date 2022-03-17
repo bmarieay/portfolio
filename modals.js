@@ -16,12 +16,10 @@ modalTogglers.forEach( modalToggler => {
     modalToggler.addEventListener('click', e => {
         e.preventDefault();
         const modal = modalToggler.parentNode.parentNode.nextElementSibling;
-        // modal.classList.add('is-open');
         modalOpen(modal);
         const closeBtn = modal.querySelector('.modal-close');
         closeBtn.addEventListener('click', () => {
             modal.style.animation = 'modalOut 500ms forwards';
-            // modal.classList.remove('is-open');
             modal.addEventListener('animationend', modalClose);
         })
     })
@@ -31,12 +29,10 @@ resumeTogglers.forEach(resumeToggler => {
     resumeToggler.addEventListener('click', e => {
         e.preventDefault();
         const modal = document.querySelector('.modal-resume');
-        // modal.classList.add('is-open');
         modalOpen(modal);
         const closeBtn = modal.querySelector('.modal-close');
         closeBtn.addEventListener('click', () => {
             modal.style.animation = 'modalOut 500ms forwards';
-            // modal.classList.remove('is-open');
             modal.addEventListener('animationend', modalClose);
         })
     }) 
