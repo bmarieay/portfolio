@@ -1,4 +1,12 @@
 @media (min-width: 640px){
+    .circle-pull-middle{
+        display: block;
+    }
+
+    .section-about{
+        padding: 30rem 0;
+    }
+
     .about__img-container{
         max-width: 800px;
     }
