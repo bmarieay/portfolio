@@ -387,6 +387,12 @@ figcaption{
     max-width: 375px;
     /* grid-area: yelpcamp; */
 }
+.grid-child:nth-child(4){
+    max-width: 375px;
+    /* grid-area: yelpcamp; */
+}
+
+
 
 
 .section-project{
@@ -505,3 +511,4 @@ figure:hover figcaption{
 #submit-btn:active{
     background-color: white;
 }
+

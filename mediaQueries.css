@@ -24,6 +24,14 @@
         float: right;
     }
 
+    .special.mobile-only{
+        display: none;
+    }
+
+    .special.desktop-only{
+        display: block;
+    }
+
     .nav__item {
         --gap: 1.8rem;
         padding-block: 2rem;
@@ -93,6 +101,10 @@
     }
     .grid-child:nth-child(3){
         max-width: none;
+    }
+    .grid-child:nth-child(4){
+        max-width: none;
+        grid-column: 1 / -1;
     }
     
 }
@@ -214,11 +226,17 @@
 
     .grid{
         grid-template-columns: 40% 60%;
+        /* grid-template-rows: 200px 1fr 300px; */
     }
 
     .grid-child:nth-child(3){
         width: 100%;
         object-fit: cover;
+    }
+    
+    .grid-child:nth-child(4){
+        object-fit: cover;
+        max-width: 70%;
     }
 
     .modal .project__title{

@@ -7,10 +7,19 @@
     bottom: 2em;
     left: 2em;
     right: 2em;
-    background-color: var(--primary-clr);
+    background-color: var(--text-clr);
+    color: #000;
     overflow-y: scroll;
     overflow-x: hidden;
     box-shadow: 0 0 0 3em rgba(0, 0, 0, 0.85);
+}
+
+.modal .section__title{
+    margin-bottom: .05em;
+}
+
+.modal span{
+    font-weight: 700;
 }
 
 
@@ -21,15 +30,24 @@
 .is-open{
     display: block;
 }
+.modal__header-portfolio{
+    background: url('/images/portfolio-header.png');
+}
+
+.modal__header-yelpcamp{
+    background: url('/images/yelp-header.png');
+}
 
 .modal__header{
-    background: url('/images/gautam-singh-T9ZWwqt4pho-unsplash.jpg');
     background-size: cover;
     background-position: center;
     padding: 10rem 3rem 5rem 0;
-    color: var(--text-clr-inverse);
+    color: var(--text-clr);
+    text-shadow: 1px 1px 0 var(--text-clr-accent);
     margin-bottom: 2rem;
 }
+
+
 
 .header__box{
     padding: 1em;
@@ -59,11 +77,27 @@
 }
 
 .full-width{
+    position: relative;
     width: 100vw;
-    max-width: initial;
+    background-color: var(--primary-clr);
+    /* max-width: initial; */
     margin: 2rem calc(50% - 50vw);
-    height: 25vh;
-    object-fit: cover;
+    height: 25vh; 
+    /* object
+    -fit: cover; */
+}
+
+.modal-icons-container{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: 0 auto; */
+}
+
+.full-width img+img{
+    margin-left: 20px;
 }
 
 .pull-left, .pull-right{
