@@ -96,6 +96,10 @@ body{
     color: var(--text-clr);
 }
 
+.scroll-wrap{
+    position: relative;
+}
+
 img{
     max-width: 100%;
 }

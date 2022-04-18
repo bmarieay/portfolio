@@ -1,12 +1,13 @@
 const modalTogglers = document.querySelectorAll('.project__link');
 const closeButtons = document.querySelectorAll('.modal-close');
 const resumeTogglers = document.querySelectorAll('.resume');
+const wrapper = document.querySelector('.scroll-wrap');
 
 const modalOpen = function(modal){
     modal.classList.add('is-open');
     modal.style.animation = 'modalIn 500ms forwards';
     //prevent the backpage from scrolling when modal is open
-    document.body.style.overflowY = 'hidden';
+    wrapper.body.style.overflowY = 'hidden';
 }
 
 const modalClose = function(){
@@ -23,7 +24,7 @@ modalTogglers.forEach( modalToggler => {
         closeBtn.addEventListener('click', () => {
             modal.style.animation = 'modalOut 500ms forwards';
             modal.addEventListener('animationend', modalClose);
-            document.body.style.overflowY = 'scroll';
+            wrapper.body.style.overflowY = 'scroll';
 
         })
     })
@@ -38,7 +39,7 @@ resumeTogglers.forEach(resumeToggler => {
         closeBtn.addEventListener('click', () => {
             modal.style.animation = 'modalOut 500ms forwards';
             modal.addEventListener('animationend', modalClose);
-            document.body.style.overflowY = 'scroll';
+            wrapper.body.style.overflowY = 'scroll';
 
         })
     }) 
