@@ -7,7 +7,7 @@ const modalOpen = function(modal){
     modal.classList.add('is-open');
     modal.style.animation = 'modalIn 500ms forwards';
     //prevent the backpage from scrolling when modal is open
-    wrapper.body.style.overflowY = 'hidden';
+    document.body.style.overflowY = 'hidden';
 }
 
 const modalClose = function(){
@@ -24,8 +24,8 @@ modalTogglers.forEach( modalToggler => {
         closeBtn.addEventListener('click', () => {
             modal.style.animation = 'modalOut 500ms forwards';
             modal.addEventListener('animationend', modalClose);
-            wrapper.body.style.overflowY = 'scroll';
-
+            document.body.style.overflowY = 'scroll';   
+            
         })
     })
 })
@@ -37,9 +37,10 @@ resumeTogglers.forEach(resumeToggler => {
         modalOpen(modal);
         const closeBtn = modal.querySelector('.modal-close');
         closeBtn.addEventListener('click', () => {
-            modal.style.animation = 'modalOut 500ms forwards';
+            // modal.style.animation = 'modalOut 500ms forwards paused';
+            // modal.style.animationPlayState = 'none'
             modal.addEventListener('animationend', modalClose);
-            wrapper.body.style.overflowY = 'scroll';
+            document.body.style.overflowY = 'scroll';
 
         })
     }) 
@@ -50,6 +51,25 @@ resumeTogglers.forEach(resumeToggler => {
 window.addEventListener("resize", function() {
     modalTogglers.forEach( modalToggler => {
         let modal = modalToggler.parentNode.parentNode.nextElementSibling;
+        // if(modal.classList.contains("is-open")) {
+             modal.style.animation = ''
+        // }
+    })
+})
+
+// modal.addEventListener('scroll', function() {
+//     modalTogglers.forEach( modalToggler => {
+//         let modal = modalToggler.parentNode.parentNode.nextElementSibling;
+//         if(modal.classList.contains("is-open")) {
+//              modal.style.animation = ''
+//              console.log('scr')
+//         }
+//     })
+// });
+
+modalTogglers.forEach( modalToggler => {
+    let modal = modalToggler.parentNode.parentNode.nextElementSibling;
+    modal.addEventListener('scroll', e => {
         if(modal.classList.contains("is-open")) {
              modal.style.animation = ''
         }
