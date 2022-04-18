@@ -274,4 +274,17 @@
     .project__description{
         font-size: var(--fs-small);
     }
+
+    .modal{
+        top: 5rem;
+        bottom: 4.5rem;
+        left: 15rem;
+        right: 15rem;
+        box-shadow: 0 0 0 16rem rgba(0, 0, 0, 0.85);
+    }
+    
+    .modal-close{
+        top: 4rem;
+        left: 13rem;
+    }
 }
