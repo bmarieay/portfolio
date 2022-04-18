@@ -5,6 +5,8 @@ const resumeTogglers = document.querySelectorAll('.resume');
 const modalOpen = function(modal){
     modal.classList.add('is-open');
     modal.style.animation = 'modalIn 500ms forwards';
+    //prevent the backpage from scrolling when modal is open
+    document.body.style.overflowY = 'hidden';
 }
 
 const modalClose = function(){
@@ -21,6 +23,8 @@ modalTogglers.forEach( modalToggler => {
         closeBtn.addEventListener('click', () => {
             modal.style.animation = 'modalOut 500ms forwards';
             modal.addEventListener('animationend', modalClose);
+            document.body.style.overflowY = 'scroll';
+
         })
     })
 })
@@ -34,7 +38,20 @@ resumeTogglers.forEach(resumeToggler => {
         closeBtn.addEventListener('click', () => {
             modal.style.animation = 'modalOut 500ms forwards';
             modal.addEventListener('animationend', modalClose);
+            document.body.style.overflowY = 'scroll';
+
         })
     }) 
+})
+
+
+//remove the animation to the modal when resizing (removes flickering)
+window.addEventListener("resize", function() {
+    modalTogglers.forEach( modalToggler => {
+        let modal = modalToggler.parentNode.parentNode.nextElementSibling;
+        if(modal.classList.contains("is-open")) {
+             modal.style.animation = ''
+        }
+    })
 })
 
