@@ -37,8 +37,7 @@ resumeTogglers.forEach(resumeToggler => {
         modalOpen(modal);
         const closeBtn = modal.querySelector('.modal-close');
         closeBtn.addEventListener('click', () => {
-            // modal.style.animation = 'modalOut 500ms forwards paused';
-            // modal.style.animationPlayState = 'none'
+            modal.style.animation = 'modalOut 500ms forwards';
             modal.addEventListener('animationend', modalClose);
             document.body.style.overflowY = 'scroll';
 
