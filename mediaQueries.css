@@ -64,13 +64,11 @@
     }
 
     .pull-left{
-        width: 60%;
         float: left;
-        margin-right: 2rem;
+        margin-right: 5rem;
     }
     
     .pull-right{
-        width: 60%;
         float: right;
         margin-left: 2rem;
     }

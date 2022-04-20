@@ -14,6 +14,14 @@
     box-shadow: 0 0 0 6rem rgba(0, 0, 0, 0.85);
 }
 
+.modal ul{
+    margin-left: 2rem;
+}
+
+.modal li + li {
+    margin-top: 2rem;
+}
+
 .modal .section__title{
     margin-bottom: .05em;
 }
@@ -28,7 +36,7 @@
 }
 
 .is-open{
-    display: block;
+  display: block;
 }
 .modal__header-portfolio{
     background: url('/images/portfolio-header.png');
@@ -58,10 +66,13 @@
 
 .modal__content{
     font-size: var(--fs-small);
-
     width: 85%;
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.modal__text{
+    max-width: 60ch;
 }
 
 .modal-close{
@@ -102,7 +113,16 @@
 }
 
 .pull-left, .pull-right{
-    margin-top: 2rem;
+    /* margin-top : 2rem; */
+    margin-bottom : 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.spacer{
+    clear: both;
+    border: 2px solid green;
+    height: 100px;
 }
 
 @keyframes modalIn {
