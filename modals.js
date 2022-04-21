@@ -2,6 +2,8 @@ const modalTogglers = document.querySelectorAll('.project__link');
 const closeButtons = document.querySelectorAll('.modal-close');
 const resumeTogglers = document.querySelectorAll('.resume');
 const wrapper = document.querySelector('.scroll-wrap');
+const resumeModal = document.querySelector('.modal-resume');
+
 
 const modalOpen = function(modal){
     modal.classList.add('is-open');
@@ -50,22 +52,14 @@ resumeTogglers.forEach(resumeToggler => {
 window.addEventListener("resize", function() {
     modalTogglers.forEach( modalToggler => {
         let modal = modalToggler.parentNode.parentNode.nextElementSibling;
-        // if(modal.classList.contains("is-open")) {
-             modal.style.animation = ''
-        // }
+        modal.style.animation = ''
     })
+        //also remove glitch for resume modal
+        resumeModal.style.animation = '';
 })
 
-// modal.addEventListener('scroll', function() {
-//     modalTogglers.forEach( modalToggler => {
-//         let modal = modalToggler.parentNode.parentNode.nextElementSibling;
-//         if(modal.classList.contains("is-open")) {
-//              modal.style.animation = ''
-//              console.log('scr')
-//         }
-//     })
-// });
 
+//remove glitch modal for scrolling
 modalTogglers.forEach( modalToggler => {
     let modal = modalToggler.parentNode.parentNode.nextElementSibling;
     modal.addEventListener('scroll', e => {
@@ -74,4 +68,12 @@ modalTogglers.forEach( modalToggler => {
         }
     })
 })
+
+// remove glitch for resume modal when scrolling
+resumeModal.addEventListener('scroll', () => {
+    if(resumeModal.classList.contains("is-open")) {
+        modal.style.animation = ''
+   }
+})
+
 
