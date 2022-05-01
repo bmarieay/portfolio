@@ -37,7 +37,7 @@
             <div class="hero">
                 <div class="circle circle-big"></div>
                 <h1 class="hero__text hero__text--prmry">Hello, I'm Marie<br>Antonette Bacay</h1>
-                <h2 class="hero__text hero__text--scndry">A Web Developer</h2>
+                <h2 class="hero__text hero__text--scndry" style="margin-top: 1rem;">An App Developer</h2>
                 <div class="circle circle-small circle-pull-right"></div>
                 <div class="circle circle-small circle-pull-middle"></div>
             </div>
@@ -138,7 +138,7 @@
         
                                 </div>
         
-                                <div class="modal__main">
+                                <div>
                                     <p class="section__title modal__text">Highlights</p>
                                     <img src="/images/portfolio-contact.png" alt="" class="pull-left">
                                     <ul>
@@ -146,19 +146,12 @@
                                         <li><span>Big Three</span> - built with pure HTML, CSS, and Javascript.</li>
                                         <li><span>Heroku</span> - hosted by Heroku with a purchased custom domain.</li>
                                     </ul>
-                                    <div class="spacer"></div>
+                                    <div class="spacer spacer-big"></div>
                                 </div>
-                                <!-- <p>This portfolio is a static site built with pure HTML5, CSS3, and Javascript.</p>
-                                <img class="full-width" src="/images/portfolio-desktop.png" alt="">
-                                <img class="pull-left" src="/images/portfolio-grid.png" alt="">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorem, labore, quibusdam architecto provident et mollitia nobis, repellat cupiditate inventore enim aut placeat? Minus aperiam porro debitis facere neque consequatur deserunt tenetur officia autem. Consectetur, facere. Quam nihil ullam dolor?</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorem, labore, quibusdam architecto provident et mollitia nobis, repellat cupiditate inventore enim aut placeat? Minus aperiam porro debitis facere neque consequatur deserunt tenetur officia autem. Consectetur, facere. Quam nihil ullam dolor?</p>
-                                <img class="pull-right" src="/images/portfolio-contact.png" alt="">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorem, labore, quibusdam architecto provident et mollitia nobis, repellat cupiditate inventore enim aut placeat? Minus aperiam porro debitis facere neque consequatur deserunt tenetur officia autem. Consectetur, facere. Quam nihil ullam dolor?</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorem, labore, quibusdam architecto provident et mollitia nobis, repellat cupiditate inventore enim aut placeat? Minus aperiam porro debitis facere neque consequatur deserunt tenetur officia autem. Consectetur, facere. Quam nihil ullam dolor?</p> -->
                             </div>
                         </div>
                     </figure>
+
                     <figure class="project__img grid-child">
                         <img class="preview-img mobile-only" src="/images/yelp.png" alt="sample image">
                         <img class="preview-img desktop-only" src="/images/desktop-yelp.png" alt="">
@@ -187,12 +180,11 @@
                             <div class="modal__content">
                                 <h2 class="section__title">Built with:</h2>
                                 <ul>
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                    <li>Javascript</li>
-                                    <li>Node.js</li>
-                                    <li>Express.js</li>
-                                    <li>Mongo</li>
+                                    <li><span>HTML5</span> - used to structure the website along with Embedded Javascript (EJS) for templating.</li>
+                                    <li><span>CSS3</span> - added custom designs on top of Bootstrap.</li>
+                                    <li><span>Javascript</span> - used for API connection with MapBox for mapping and NPS for real campground data, local storage for pagination and cookies for user preferences such as light and dark mode.</li>
+                                    <li><span>Node and Express</span> - played a role in the backend for user authentication, security, and establishing database connection along with RESTful routes.</li>
+                                    <li><span>Mongo</span> - a NoSql database used for establishing one to many relationships in the project such as a user can have may campgrounds and reviews, etc.</li> 
                                 </ul>
                                 <div class="full-width">
                                     <div class="modal-icons-container modal-icons-container--lg" >
@@ -207,6 +199,27 @@
         
                                     </div>
         
+                                </div>
+
+                                <div class="modal__main">
+                                    <p class="section__title modal__text">Highlights</p>
+                                    <img src="/images/yelpcamp-map.png" alt="" class="pull-left">
+                                    <ul>
+                                        <li><span>MapBox</span> - API that displayed the locations of campgrounds currently displayed to the users.</li>
+                                        <li><span>Pagination</span> - limits the amount of data loaded to users to save running time rather than loading hundreds of campgrounds in one go.</li>
+                                        <img src="/images/yelpcamp-pagination.png" class="little-img">
+                                        
+                                    </ul>
+                                    <div class="spacer spacer-sm">
+                                    </div>
+                                    <img src="/images/yelpcamp-review.png" alt="" class="pull-right">
+                                    <ul style="clear: left;">
+                                        <li><span>Reviews</span> - users can leave reviews to campgrounds and they can also decide to delete it.</li>
+                                        <li><span>Flash Message</span> - provides immediate feedback to users when logging in/out, registering, creating and deleting campgrounds or reviews, as well as any errors such as wrong credentials when logging in.</li>
+                                        <img src="/images/yelpcamp-flash.png" class="little-img">
+                                    </ul>
+                                    <div class="spacer spacer-big">
+                                    </div>
                                 </div>
                             </div>
                         </div>

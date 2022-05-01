@@ -98,6 +98,15 @@
     height: 25vh; 
 }
 
+.modal__main .pull-left
+{
+    max-width: 300px;
+}
+
+.little-img{
+    display: none;
+}
+
 .modal-icons-container{
      display: flex;
      max-width: 800px;
@@ -117,17 +126,29 @@
   
 }
 
-.pull-left, .pull-right{
+.pull-left{
     /* margin-top : 2rem; */
     margin-bottom : 2rem;
     width: 100%;
     max-width: 400px;
 }
 
-.spacer{
+.pull-right{
     clear: both;
-    border: 2px solid green;
+    float: right;
+}
+
+
+.spacer, .spacer-sm{
+    clear: both;
+}
+
+.spacer-big{
     height: 100px;
+}
+
+.spacer-sm{
+    height: 30px;
 }
 
 @keyframes modalIn {
