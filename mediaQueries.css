@@ -217,11 +217,19 @@
 
     
     
-    .little-img{
+    .little-img, .medium-img{
         margin: 1rem 0 2rem 0;
         display: block;
         width: 90%;
+    }
+    
+    .little-img{
         max-width: 350px;
+    }
+    
+    .medium-img{
+        max-width: 265px;
+
     }
 
     .mobile-only{

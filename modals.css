@@ -103,7 +103,7 @@
     max-width: 300px;
 }
 
-.little-img{
+.little-img, .medium-img{
     display: none;
 }
 
