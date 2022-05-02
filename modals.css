@@ -77,8 +77,8 @@
 
 .modal-close{
     position: fixed;
-    top: 4rem;
-    left: 2rem;
+    top: 6rem;
+    left: 4rem;
     background-color: var(--accent-clr);
     border: none;
     width: 30px; 

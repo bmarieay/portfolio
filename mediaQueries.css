@@ -204,15 +204,11 @@
     }
 
     .modal-close{
-        position: fixed;
-        top: 2.2em;
-        left: 2em;
-        background-color: var(--accent-clr);
-        border: none;
+        top: 6rem;
+        left: 6rem;
         width: 40px; 
         height: 40px;
         padding: 10px;
-        border-radius: 50%;
     }
 
     
@@ -300,7 +296,7 @@
     }
     
     .modal-close{
-        top: 4rem;
-        left: 13rem;
+        top: 8rem;
+        left: 17rem;
     }
 }

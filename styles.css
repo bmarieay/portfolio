@@ -396,9 +396,6 @@ figcaption{
     /* grid-area: yelpcamp; */
 }
 
-
-
-
 .section-project{
     padding: 20rem 0;
 }
@@ -408,6 +405,10 @@ figcaption{
     display: flex;
     justify-content: space-between;
     width: 120px;
+}
+
+.project__img-links.two-link{
+    justify-content: flex-start;
 }
 
 .project__img-links img{
