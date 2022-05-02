@@ -46,6 +46,10 @@
     background: url('/images/yelp-header.png');
 }
 
+.modal__header-storybooks{
+    background: url('/images/story-header.png');
+}
+
 .modal__header{
     background-size: cover;
     background-position: center;
