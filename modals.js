@@ -29,6 +29,13 @@ modalTogglers.forEach( modalToggler => {
             document.body.style.overflowY = 'scroll';   
             
         })
+        window.addEventListener("keydown", e => {
+            if(e.code === "Escape"){
+                modal.style.animation = 'modalOut 500ms forwards';
+                modal.addEventListener('animationend', modalClose);
+                document.body.style.overflowY = 'scroll';
+            } 
+        })
     })
 })
 
@@ -42,10 +49,21 @@ resumeTogglers.forEach(resumeToggler => {
             modal.style.animation = 'modalOut 500ms forwards';
             modal.addEventListener('animationend', modalClose);
             document.body.style.overflowY = 'scroll';
-
+            
+        })
+        window.addEventListener("keydown", e => {
+            if(e.code === "Escape"){
+                modal.style.animation = 'modalOut 500ms forwards';
+                modal.addEventListener('animationend', modalClose);
+                document.body.style.overflowY = 'scroll';
+            } 
         })
     }) 
 })
+
+
+//close the modal on ESC button for accessibility
+
 
 
 //remove the animation to the modal when resizing (removes flickering)
