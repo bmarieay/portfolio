@@ -17,35 +17,45 @@ const modalClose = function(){
     this.removeEventListener('animationend', modalClose);
 }
 
+const modalControl = function(modal){
+    modalOpen(modal);
+    const closeBtn = modal.querySelector('.modal-close');
+    closeBtn.addEventListener('click', () => {
+        modal.style.animation = 'modalOut 500ms forwards';
+        modal.addEventListener('animationend', modalClose);
+        document.body.style.overflowY = 'scroll';   
+        
+    })
+    window.addEventListener("keydown", e => {
+        if(e.code === "Escape"){
+            modal.style.animation = 'modalOut 500ms forwards';
+            modal.addEventListener('animationend', modalClose);
+            document.body.style.overflowY = 'scroll';
+        } 
+    })
+}
+
 modalTogglers.forEach( modalToggler => {
     modalToggler.addEventListener('click', e => {
         e.preventDefault();
         const modal = modalToggler.parentNode.parentNode.nextElementSibling;
-        modalOpen(modal);
-        const closeBtn = modal.querySelector('.modal-close');
-        closeBtn.addEventListener('click', () => {
-            modal.style.animation = 'modalOut 500ms forwards';
-            modal.addEventListener('animationend', modalClose);
-            document.body.style.overflowY = 'scroll';   
-            
-        })
+        modalControl(modal);
     })
+ 
 })
+
 
 resumeTogglers.forEach(resumeToggler => {
     resumeToggler.addEventListener('click', e => {
         e.preventDefault();
         const modal = document.querySelector('.modal-resume');
-        modalOpen(modal);
-        const closeBtn = modal.querySelector('.modal-close');
-        closeBtn.addEventListener('click', () => {
-            modal.style.animation = 'modalOut 500ms forwards';
-            modal.addEventListener('animationend', modalClose);
-            document.body.style.overflowY = 'scroll';
-
-        })
+        modalControl(modal);
     }) 
 })
+
+
+//close the modal on ESC button for accessibility
+
 
 
 //remove the animation to the modal when resizing (removes flickering)
